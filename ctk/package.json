@@ -1,0 +1,23 @@
+{
+  "name": "ctk-tmf915-ai-management",
+  "version": "4.0.0",
+  "description": "Conformance Test Kit for TMF915 AI Management",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "TMForum",
+    "Conformance",
+    "Test",
+    "Kit"
+  ],
+  "author": "Henrique Rodrigues (hrodrigues@tmforum.org)",
+  "dependencies": {
+    "ajv": "^6.12.3",
+    "jsonschema": "^1.2.6",
+    "newman": "^5.1.2",
+    "newman-reporter-html": "^1.0.5"
+  }
+}

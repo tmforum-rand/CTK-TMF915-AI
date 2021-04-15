@@ -1,0 +1,43 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "aiContractSpecification": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": ["id"]
+        },
+        "aiModel": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": ["id"]
+        },
+        "relatedParty": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "@referredType": {
+                        "type": "string"
+                    }
+                },
+                "required": ["@referredType", "id"]
+            }
+        },
+        "state": {
+            "type": "string"
+        }
+    },
+    "required": ["aiContractSpecification", "aiModel", "relatedParty", "state"]
+}

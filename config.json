@@ -1,0 +1,102 @@
+{
+    "url": "http://tmf915-aimanagement-v4.mybluemix.net/tmf-api/AiM/v4/",
+    "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+    },
+    "payloads": {
+        "Alarm": {
+            "POST": {
+                "payload": {
+                    "alarmRaisedTime": "2019-07-03T03:32:17.235Z",
+                    "alarmType": "processingErrorAlarm",
+                    "alarmedObject": {
+                        "id": "93051825",
+                        "href": "/resourceInventoryManagement/v4/resource/93051825"
+                    },
+                    "perceivedSeverity": "MAJOR",
+                    "probableCause": "thresholdCrossed",
+                    "sourceSystemId": "aiOps-1",
+                    "state": "raised"
+                }
+            }
+        },
+        "AiContractSpecification": {
+            "POST": {
+                "payload": {
+                    "name": "AI Management Contract Specification for PCP"
+                }
+            }
+        },
+        "AiContractViolation": {
+            "POST": {
+                "payload": {
+                    "aiContract": {
+                        "id": "4242"
+                    },
+                    "violation": {
+                        "referenceValue": "10",
+                        "operator": "GT",
+                        "actualValue": "12",
+                        "consequence": "Alarm"
+                    }
+                }
+            }
+        },
+        "AiModelSpecification": {
+            "POST": {
+                "payload": {
+                    "name": "PCP AIModelAsAService Specification"
+                }
+            }
+        },
+        "AiContract": {
+            "POST": {
+                "payload": {
+                    "aiContractSpecification": {
+                        "id": "2435"
+                    },
+                    "aiModel": {
+                        "id": "12312132"
+                    },
+
+                    "relatedParty": [{
+                        "id": "456",
+                        "@referredType": "Organization"
+                    }],
+                    "state": "Active"
+                }
+            }
+        },
+        "AiModel": {
+            "POST": {
+                "payload": {
+                    "state": "active",
+                    "software": [{
+                        "href": "https://mycsp.com:8080/tmf-api/resourceInventory/v4/Software/tf.keras.optimizers",
+                        "id": " tf.keras.optimizers",
+                        "softwareVersion": "v2.2.0",
+                        "@type": "SoftwareRef",
+                        "@referredType": "Software"
+                    }],
+                    "aiModelSpecification": {
+                        "@type": "AiModelSpecification",
+                        "id": "1212",
+                        "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification/PCPAIModelAsAServiceSpecification",
+                        "name": "PCPAIModelAsAServiceSpecification",
+                        "version": "1.0.0"
+                    }
+                }
+            }
+        },
+        "Rule": {
+            "POST": {
+                "payload": {
+                    "name": "Ai Rule",
+                    "@type": "Rule"
+
+                }
+            }
+        }
+    }
+}
